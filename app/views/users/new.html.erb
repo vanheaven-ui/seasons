@@ -1,0 +1,13 @@
+<section class="container signup mt-3 py-md-5 transparent-bg h-100">
+  <div class="row">
+    <div class="col-12 col-md-6 text-center text-white border">
+      <h1 class="text-white">Welcome to Seasons</h1>
+    </div>
+    <div class="col-12 col-md-6 text-center border white-bg">
+      <h2 class="text-white">Please Register Here</h2>
+      <%= render 'form', user: @user %>
+      <span>Already have an account? <%= link_to 'Login'%></span><br />
+      <%= link_to 'Back', users_path %>
+    </div>
+  </div>
+</section>
