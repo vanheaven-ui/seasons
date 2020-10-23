@@ -3,9 +3,10 @@ class CreateArticles < ActiveRecord::Migration[6.0]
     create_table :articles do |t|
       t.text :title
       t.text :text
-      t.references :author, null: false, foreign_key: true
+      t.references :author, null: false
 
       t.timestamps
     end
+    add_foreign_key :articles, :users, column: :author_id
   end
 end
