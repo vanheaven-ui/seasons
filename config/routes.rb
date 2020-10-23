@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   root 'users#index'
   resources :users, except: %i[new]
   get '/sign_up', to: 'users#new'
