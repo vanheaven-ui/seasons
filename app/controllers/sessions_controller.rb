@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 def new; end
 
   def create
-    @user = User.find_by(id: params[:id])
+    @user = User.find_by(name: params[:name])
     if @user
       redirect_to root_path, notice: 'Login successful, enjoy!'
     else
