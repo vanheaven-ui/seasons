@@ -1,0 +1,32 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[branch "main"]
+[remote "origin"]
+	url = git@github.com:vanheaven-ui/seasons.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[gitflow "branch"]
+	master = main
+	develop = develop
+[gitflow "prefix"]
+	feature = feature/
+	bugfix = bugfix/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag = 
+[gitflow "path"]
+	hooks = /home/vanheaven/Microverse-projects/seasons/.git/hooks
+[branch "develop"]
+	remote = origin
+	merge = refs/heads/develop
+[gitflow "branch.feature/mvp-v1"]
+	base = develop
+[branch "feature/mvp-v1"]
+	remote = origin
+	merge = refs/heads/feature/mvp-v1

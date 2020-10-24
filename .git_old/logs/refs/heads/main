@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 94c9328c2a301f1363d1404a5cf8db4040e35b63 vanheaven <vanheaven6@gmail.com> 1603417117 +0300	commit (initial): Project Setup
+94c9328c2a301f1363d1404a5cf8db4040e35b63 feec8764ad6bba93aa8d4fc847e816c2a1ca5f30 vanheaven <vanheaven6@gmail.com> 1603419091 +0300	commit: Setup active_storage
+feec8764ad6bba93aa8d4fc847e816c2a1ca5f30 feec8764ad6bba93aa8d4fc847e816c2a1ca5f30 vanheaven <vanheaven6@gmail.com> 1603419620 +0300	Branch: renamed refs/heads/master to refs/heads/main
+feec8764ad6bba93aa8d4fc847e816c2a1ca5f30 eb900226fb5a13da8a2b104f4e7332e327c516e0 vanheaven <vanheaven6@gmail.com> 1603422116 +0300	commit (merge): Project Setup

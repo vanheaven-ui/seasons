@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md navbar-light bg-white">
+  <%= link_to 'Seasons', root_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse show" id="navbarsExample04" style="">
+    <ul class="navbar-nav mr-auto text-uppercase mx-auto">
+      <li class="nav-item active">
+        <%= link_to 'Home', root_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Write Article',new_article_path, class: "nav-link" %>
+      </li>
+    </ul>
+    <ul class="navbar-nav navbar-right">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Current_user</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown04">
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" href="#">Activity</a>
+          <%= link_to 'Logout', logout_path, method: :delete, class: 'dropdown-item text-orange' %>
+        </div>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Login', login_path, class: 'nav-link text-uppercase' %>
+      </li>
+      <span class="verticle-bar text-muted">|</span>
+      <li class="nav-item">
+        <%= link_to 'Register', sign_up_path, class: 'nav-link text-uppercase' %>
+      </li>
+    </ul>
+  </div>
+</nav>
