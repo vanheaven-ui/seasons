@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 
   body {
-    background-color: #333;
+    background-color: #4e443e;
     .transparent-bg {
       background-color: rgba(255, 129, 0, 0.2);
     }
@@ -12,6 +12,14 @@ html {
     }
     .white-bg {
       background-color: #fff;
+    }
+    
+    .text-orange {
+      color: #ff6300;
+    }
+
+    .verticle_bar {
+      border-right: 1px, #333;
     }
   }
 }
