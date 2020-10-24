@@ -24,6 +24,16 @@ html {
 
     .logo {
       width: 90px;
+      margin: -20px -20px;
+    }
+
+    .social-links-item {
+      display: inline-block;
+      background-color: #ff6300;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      text-align: center;
     }
   }
 }
