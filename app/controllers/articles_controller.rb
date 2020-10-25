@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.all.includes(:categories).limit(4)
+    @users = User.all
   end
 
   # GET /articles/1

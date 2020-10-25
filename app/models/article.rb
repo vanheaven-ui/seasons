@@ -3,4 +3,5 @@ class Article < ApplicationRecord
   has_many :votes
   has_many :article_categories
   has_many :categories, through: :article_categories, foreign_key: :category_id, source: :category
+
 end

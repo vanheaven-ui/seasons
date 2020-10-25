@@ -4,7 +4,9 @@
         <div class="card">
           <div class="ph">
             <img class="card-img-top" src="..." alt="Card image cap">
-            <%= link_to content_tag(:span, 'Category', class: "category text-orange"), categories_path %>
+            <a href="#",>
+              <span class="category text-orange"><%= article.categories.first.name %></span>
+            </a>
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= article.title %></h5>
