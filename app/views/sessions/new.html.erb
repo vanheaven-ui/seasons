@@ -1,13 +1,15 @@
-<section class="login container mt-3 py-md-5 transparent-bg h-100">
+<section class="login container mt-3 py-md-5 transparent-bg p-auth">
   <div class="row">
-    <div class="col-12 col-md-6 text-center text-white">
+    <div class="col-12 col-md-6 text-center text-white d-flex flex-column align-items-center justify-content-center">
       <h1>Your Access</h1>
+      <hr />
       <p>Thank you for providing your wonderful name. Please confirm that we have the right details in the system by entering your username in the form on the right hand side. We cannot wait to feature your wondeful articles.</p>
     </div>
-    <div class="col-12 col-md-6 text-center white-bg py-2">
-      <h1 class="text-warning">LOGO</h1>
+    <div class="col-12 col-md-6 text-center white-bg py-3">
+      <%= image_tag("header-logo.png", class: 'logo') %>
       <h2 class="text-secondary">Enter your username to redeem your access</h2>
       <%= render 'sessions/form'%>
+      <p class="mt-2">Don't have an account? <%= link_to 'Sign Up', sign_up_path %></p>
     </div>
   </div>
 </section>
