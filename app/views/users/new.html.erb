@@ -8,7 +8,7 @@
     <div class="col-12 col-md-6 text-center border white-bg py-3">
       <%= image_tag("header-logo.png", class: "logo") %>
       <h2 class="text-secondary">Please Register Here</h2>
-      <%= render 'form', user: @user %>
+      <%= render 'users/form', user: @user %>
       <span>
         Already have an account?
         <%= link_to 'Login', login_path %>

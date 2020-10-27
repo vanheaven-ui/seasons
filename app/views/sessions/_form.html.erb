@@ -1,10 +1,13 @@
-<%= form_with(url: '/login', local:true) do |f| %>
-  <div class="form-group">
-    <%= f.label :username %>
-    <%= f.text_field :username, class: 'form-control', placeholder: 'Enter your awesome username' %>
+<%= form_with(url: '/login', local: true) do |form| %>
+
+   <div class="form-group">
+    <%= form.label :username %>
+    <%= form.text_field :username, 
+                        placeholder: 'Enter your username here', 
+                        class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit 'Login', class: "btn btn-orange" %>
+    <%= form.submit 'Login', class: 'btn btn-orange' %>
   </div>
 <% end %>

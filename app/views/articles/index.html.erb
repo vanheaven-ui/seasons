@@ -2,7 +2,7 @@
   <div class="row">
     <article class="col-12 col-md-9 text-orange p-5">
       Article with most votes comes here with a full-width image <br />
-      <%= top_voted(@articles) %>
+      <%= most_votes(@articles) %>
       <h5 class="text-orange text-bold"></h5>
     </article>
     <aside class="col-md-3 user-activity text-white p-0 pt-2">
@@ -21,11 +21,16 @@
   <div class="row">
     <% @articles.each do |article| %>
       <article class="col-6 col-md-3 p-0">
+        <% if article.image.attached? %>
+          <div style="background: url(<%= url_for(article.image) %>); background-size: cover;" class="ph ph-index">
+        <% else %>
         <div class="ph ph-index">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <a href="/categories"><span class="category-index text-orange"><%= article.categories.first.name %></span></a> 
-          <a href="#"><span class='title-index text-white'><%= article.title %></span></a>
-        </div>
+          No images to display
+        <% end %>
+            
+            <a href="#"><span class='title-index text-white'><%= article.title %></span></a>
+          </div>
+       
       </article>
     <% end %>
   </div>

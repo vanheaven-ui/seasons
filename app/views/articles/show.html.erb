@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<% if @article.image.attached? %>
+  <%= image_tag(@article.image.variant(resize: "300x300!")) %>
+<% end %>
 <p>
   <strong>Title:</strong>
   <%= @article.title %>

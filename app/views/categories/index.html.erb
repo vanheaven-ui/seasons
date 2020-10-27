@@ -1,19 +1,19 @@
 <div class="row">
-    <% @articles.each do |article| %>
-      <article class="col-6 col-md-3 p-0">
-        <div class="card">
-          <div class="ph">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <a href="#",>
-              <span class="category text-orange"><%= article.categories.first.name %></span>
-            </a>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><%= article.title %></h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="text-orange">read more...</a>
-          </div>
+  <% @articles.each do |article| %>
+    <article class="col-6 col-md-3 p-0">
+      <div class="card">
+        <div class="ph">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <a href="#",>
+            <span class="category text-orange"><%= article.categories.first.name %></span>
+          </a>
         </div>
-      </article>
-    <% end %>
-  </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= article.title %></h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="text-orange">read more...</a>
+        </div>
+      </div>
+    </article>
+  <% end %>
+</div>
