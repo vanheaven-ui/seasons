@@ -1,11 +1,15 @@
 <section class="home-page container-fluid">
   <div class="row">
-    <article class="col-12 col-md-9 text-orange p-5">
-      Article with most votes comes here with a full-width image <br />
-      <%= most_votes(@articles) %>
-      <h5 class="text-orange text-bold"></h5>
+    <article class="col-12 col-md-9 text-orange p-0">
+      <% if most_votes(@articles).image.attached? %>
+        <div style="background: url(<%= url_for(most_votes(@articles).image) %>); background-size: cover;" class="ph ph-index">
+      <% end %>
+      <% if most_votes(@articles).categories.exists? %>
+        <%= link_to article.categories.first.name, categories_path, class: 'article-category text-orange' %>
+      <% end %>
+        <%= link_to most_votes(@articles).title, article_path(most_votes(@articles)), class: 'title-index text-white' %>
     </article>
-    <aside class="col-md-3 user-activity text-white p-0 pt-2">
+    <aside class="col-md-3 user-activity text-white p-0">
       <h5 class="text-white bg-orange pl-4">User Leaderboard</h5>
       <ul class="list-group">
         <% @users.each do |user| %>
