@@ -13,7 +13,9 @@
 
   <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, class: 'form-control', placeholder: 'Enter title here' %>
+    <%= form.text_field :title, class: 'form-control', 
+                                placeholder: 'Enter title here',
+                                autofocus: true %>
   </div>
 
   <div class="form-group">
@@ -24,6 +26,11 @@
   <div class="form-group">
     <%= form.label :image %><br />
     <%= form.file_field :image %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :category_id, 'Category'%>
+    <%= form.collection_select(:category_id, Category.all.order(:name), :id, :name, {}, { class: 'form-control', :prompt => true }) %>
   </div>
 
   <!-- <div class="field">

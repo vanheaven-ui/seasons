@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all.includes(:categories).limit(4).order("categories.priority")
+    @articles = Article.all.includes(:categories).order("categories.priority")
     # @articles = Article.all
     @users = User.all.preload(:authored_articles).limit(6)
   end
@@ -29,6 +29,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
+        ArticleCategory.create!(article_id: @article.id, category_id: params[:category_id])
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
@@ -70,6 +71,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :text, :image, categories_attributes: [:name, :priority])
+      params.require(:article).permit(:title, :text, :image, :category_id)
     end
 end
