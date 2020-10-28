@@ -52,8 +52,15 @@ html {
     }
 
     .logo {
-      width: 90px;
-      margin: -20px -20px;
+      width: 60px;
+    }
+
+    .curved-border {
+      border-radius: 10px;
+    }
+
+    .show-page {
+      width: 50%
     }
 
     .social-links-item {
@@ -106,10 +113,22 @@ html {
     }
 
     article {
-      a {
+      .title-index {
         position: absolute;
         bottom: 5px;
         left: 15px;
+      }
+
+      .article-category {
+        position: absolute;
+        bottom: 160px;
+        left: 15px;
+        border-bottom: 2px solid #cec806;
+        transition: all 0.5s ease-out;
+        :hover {
+          color: white;
+          text-decoration: none;
+        }
       }
     }
 

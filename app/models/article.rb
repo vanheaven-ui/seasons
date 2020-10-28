@@ -6,4 +6,8 @@ class Article < ApplicationRecord
   has_one_attached :image
 
   accepts_nested_attributes_for :article_categories
+
+  def category_list
+    categories.join(', ')
+  end
 end

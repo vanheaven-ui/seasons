@@ -1,17 +1,26 @@
 @media screen and (max-width: 768px) {
-  .sm-center-text {
-    text-align: center;
+  html {
+    body {
+      .sm-center-text {
+        text-align: center;
+      }
+    
+      .user-activity {
+        display: none;
+      }
+    
+      .p-auth {
+        padding: 0px;
+      }
+    
+      .verticle_bar {
+        display: none;
+      }
+    
+      .show-page {
+        width: 100%;
+      }
+    }
   }
-
-  .user-activity {
-    display: none;
-  }
-
-  .p-auth {
-    padding: 0px;
-  }
-
-  .verticle_bar {
-    display: none;
-  }
+  
 }

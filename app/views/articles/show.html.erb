@@ -1,22 +1,28 @@
-<p id="notice"><%= notice %></p>
-
-<% if @article.image.attached? %>
-  <%= image_tag(@article.image.variant(resize: "300x300!")) %>
-<% end %>
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @article.author_id %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<section class="show-page mx-auto pt-3">
+  <div class="card">
+    <% if @article.image.attached? %>
+      <%= image_tag(@article.image.variant(resize: "100%!"), class: 'article-img') %>
+    <% end %>
+    <div class="card-body"> 
+      <div class='d-flex justify-content-between'>
+        <p>
+          <strong>Written By: </strong>
+          <span class="text-orange"><%= link_to @article.author.name, user_path(@article.author.id) %></span>
+        </p>
+        <span><%= distance_of_time_in_words(Time.now, @article.created_at) %> ago</span>
+      </div>
+      <small>
+        <span class='mr-2 text-bold'>Voted</span>
+        <%= pluralize(@article.votes.count, 'time') %>
+      </small>
+      <h5 class="card-title"><%= @article.title %></h5>
+      <p class="card-text"><%= @article.text %></p>
+      <div class="card-footer">
+        <%= link_to 'Edit', edit_article_path(@article) %> |
+        <%= link_to 'Back', articles_path %>
+        <a href='#' class="btn btn-orange"><i class='fa fa-check' aria-hidden="true"></i>VOTE</a>
+        <a href='#' class="btn btn-danger"><i class='fa fa-times' aria-hidden="true"></i>UNVOTE</a>
+      </div>
+    </div>
+  </div>
+</section>

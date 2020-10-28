@@ -25,7 +25,7 @@
           <div style="background: url(<%= url_for(article.image) %>); background-size: cover;" class="ph ph-index">
         <% end %>
         <% if article.categories.exists? %>
-          <a href='#'><span class='text-orange'><%= article.categories.first.name %></span>
+          <%= link_to article.categories.first.name, categories_path, class: 'article-category text-orange' %>
         <% end %>
           <%= link_to article.title, article_path(article), class: 'title-index text-white' %>
         </div> 

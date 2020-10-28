@@ -1,9 +1,14 @@
-<p id="notice"><%= notice %></p>
+<section class="user-page w-50 mx-auto pt-3">
+  <h2 class="text-orange"><%= @user.name%>'s Profile</h2>
+  <ul class="list-group">
+    <h3 class="text-white u-orange mb-3">Articles Authored</h3>
+    <% @written_articles.each do |article| %>
+      <li class="list-group-item">
+        <span class='mr-2'>+ <%= article.title %></span>
+      </li>
+    <% end %>
+  </ul>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+</section>

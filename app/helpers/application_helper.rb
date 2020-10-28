@@ -7,4 +7,12 @@ module ApplicationHelper
       return content_tag('span', value, class: 'alert alert-danger text-center text-bold', style: 'width: fit-content')
     end
   end
+
+  def vote_or_unvote(article)
+    if article.votes.any?
+      to have UNVOTE btn
+    else
+      To have VOTE btn
+    end
+  end
 end
