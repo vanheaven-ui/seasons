@@ -1,17 +1,18 @@
 <section class="container signup mt-3 py-md-5 transparent-bg p-auth">
   <div class="row">
     <div class="col-12 col-md-6 text-center pr-3 text-white d-flex flex-column justify-content-center">
-      <h1 class="text-white">Your Access</h1>
+      <h1 class="text-white u-orange">Your Access</h1>
       <hr />
-      <p>Thank you for registering. It now time to check if your details are correct. Proceed and login by filling in the form on the right hand side</p>
+      <p>Thank you for registering. It now time to check if your details are correct. Proceed and login by filling in the form on the right hand side.</p>
     </div>
     <div class="col-12 col-md-6 text-center border white-bg py-3">
       <%= image_tag("header-logo.png", class: "logo") %>
-      <h2 class="text-secondary">Please Register Here</h2>
+      <h2 class="text-secondary">Enter username to login</h2>
+      <hr />
       <%= render 'sessions/form', user: @user %>
       <span>
-        Already have an account?
-        <%= link_to 'Login', login_path %>
+        Don't have an account?
+        <%= link_to 'Sign Up', sign_up_path %>
       </span>
       <br />
       <%= link_to 'Cancel', root_path %>

@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
   helper_method :user_signed_in?
+  helper_method :require_login
 
   def current_user
     User.find_by(id: session[:user_id])
@@ -12,6 +13,10 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    user_signed_in?
+    if current_user.nil?
+      redirect_to login_path, alert: 'Permission denied, you should login or signup'
+    else
+      current_user
+    end
   end
 end
