@@ -1,7 +1,7 @@
-<section class="show-page mx-auto pt-3">
+<section class="show-page mx-auto pt-1">
   <div class="card">
     <% if @article.image.attached? %>
-      <%= image_tag(@article.image.variant(resize: "100%!"), class: 'article-img') %>
+      <%= image_tag(@article.image.variant(resize: "100%!"), class: 'article-img w-100 vh-40') %>
     <% end %>
     <div class="card-body"> 
       <div class='d-flex justify-content-between'>

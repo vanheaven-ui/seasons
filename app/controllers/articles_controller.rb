@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all.includes(:categories).limit(4).order("categories.priority")
     # @articles = Article.all
-    @users = User.all.preload(:authored_articles)
+    @users = User.all.preload(:authored_articles).limit(6)
   end
 
   # GET /articles/1
