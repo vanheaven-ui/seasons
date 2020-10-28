@@ -5,8 +5,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all.includes(:categories).order("categories.priority")
-    # @articles = Article.all
+    @category_articles = Article.all.includes(:categories).order("categories.priority").limit(4)
+    @articles = Article.all
     @users = User.all.preload(:authored_articles).limit(6)
   end
 
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        ArticleCategory.create!(article_id: @article.id, category_id: params[:category_id])
+        @article.article_categories.create(category_id: params[:category_id])
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else

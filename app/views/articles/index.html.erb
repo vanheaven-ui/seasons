@@ -23,13 +23,13 @@
     </aside>
   </div>
   <div class="row">
-    <% @articles.each do |article| %>
+    <% @category_articles.each do |article| %>
       <article class="col-6 col-md-3 p-0">
         <% if article.image.attached? %>
           <div style="background: url(<%= url_for(article.image) %>); background-size: cover;" class="ph ph-index">
         <% end %>
-        <% if article.categories.exists? %>
-          <%= link_to article.categories.first.name, categories_path, class: 'article-category text-orange' %>
+        <% if article.categories.any? %>
+          <%= link_to article.categories.first.name, category_path(id: article.categories.first.id), class: 'article-category text-orange' %>
         <% end %>
           <%= link_to article.title, article_path(article), class: 'title-index text-white' %>
         </div> 

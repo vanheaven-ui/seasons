@@ -5,17 +5,17 @@
     <% end %>
     <div class="card-body"> 
       <div class='d-flex justify-content-between'>
-        <p>
+        <p class="mb-1">
           <strong>Written By: </strong>
           <span class="text-orange"><%= link_to @article.author.name, user_path(@article.author.id) %></span>
         </p>
         <span><%= distance_of_time_in_words(Time.now, @article.created_at) %> ago</span>
       </div>
       <small>
-        <span class='mr-2 text-bold'>Voted</span>
+        <span class='mr-1 mb-2 text-orange'><strong>Voted</strong></span>
         <%= pluralize(@article.votes.count, 'time') %>
       </small>
-      <h5 class="card-title"><%= @article.title %></h5>
+      <h5 class="card-title"><strong><%= @article.title %></strong></h5>
       <p class="card-text"><%= @article.text %></p>
       <div class="card-footer">
         <%= link_to 'Edit', edit_article_path(@article) %> |
