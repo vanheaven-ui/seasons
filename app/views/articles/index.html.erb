@@ -23,14 +23,12 @@
       <article class="col-6 col-md-3 p-0">
         <% if article.image.attached? %>
           <div style="background: url(<%= url_for(article.image) %>); background-size: cover;" class="ph ph-index">
-        <% else %>
-        <div class="ph ph-index">
-          No images to display
         <% end %>
-            
-            <a href="#"><span class='title-index text-white'><%= article.title %></span></a>
-          </div>
-       
+        <% if article.categories.exists? %>
+          <a href='#'><span class='text-orange'><%= article.categories.first.name %></span>
+        <% end %>
+          <%= link_to article.title, article_path(article), class: 'title-index text-white' %>
+        </div> 
       </article>
     <% end %>
   </div>

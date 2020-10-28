@@ -104,5 +104,14 @@ html {
         }
       }
     }
+
+    article {
+      a {
+        position: absolute;
+        bottom: 5px;
+        left: 15px;
+      }
+    }
+
   }
 }

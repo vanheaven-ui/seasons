@@ -5,8 +5,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    # @articles = Article.all.includes(:categories).limit(4).order("categories.priority")
-    @articles = Article.all
+    @articles = Article.all.includes(:categories).limit(4).order("categories.priority")
+    # @articles = Article.all
     @users = User.all.preload(:authored_articles)
   end
 
@@ -70,6 +70,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :text, :image)
+      params.require(:article).permit(:title, :text, :image, categories_attributes: [:name, :priority])
     end
 end

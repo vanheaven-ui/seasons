@@ -26,6 +26,21 @@
     <%= form.file_field :image %>
   </div>
 
+  <div class="field">
+    <%= form.label :category %>
+    <%= fields_for (@category) do |builder| %>
+      <div class="form-control">
+        <%= builder.label :name %>
+        <%= builder.text_field :name, class: '' %>
+      </div>
+
+      <div class="form-control">
+        <%= builder.label :priority %>
+        <%= builder.text_field :priority, class: '' %>
+      </div>
+    <% end %>
+  </div>
+
   <div class="actions">
     <p class='text-center'><%= form.submit %></p>
   </div>
