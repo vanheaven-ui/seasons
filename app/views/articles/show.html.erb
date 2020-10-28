@@ -20,8 +20,7 @@
       <div class="card-footer">
         <%= link_to 'Edit', edit_article_path(@article) %> |
         <%= link_to 'Back', articles_path %>
-        <a href='#' class="btn btn-orange"><i class='fa fa-check' aria-hidden="true"></i>VOTE</a>
-        <a href='#' class="btn btn-danger"><i class='fa fa-times' aria-hidden="true"></i>UNVOTE</a>
+        <%= vote_or_unvote(@article) %>
       </div>
     </div>
   </div>

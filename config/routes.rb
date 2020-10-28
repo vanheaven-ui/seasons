@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :articles
+  resources :articles do
+    resources :votes, only: %i[create destroy]
+  end
   resources :categories
   root 'articles#index'
   resources :users, except: %i[new]
