@@ -3,9 +3,16 @@
 </header>
 <section class="show-page mx-auto pt-1">
   <div class="card">
-    <% if @article.image.attached? %>
-      <%= image_tag(@article.image.variant(resize: "100%!"), class: 'article-img w-100 vh-40') %>
-    <% end %>
+    <div class="card-img vh-30">
+      <% if @article.image.attached? %>
+        <%= image_tag(@article.image.variant(resize: "100%!"), class: 'article-img w-100 vh-30') %>
+      <% end %>
+      <a href="#">
+        <% if @article.categories.any? %>
+          <span class="even-category text-white transparent-bg"><%= @article.categories.first.name %></span>
+        <% end %>
+      </a>
+    </div>
     <div class="card-body">
       <div class='d-flex justify-content-between'>
         <p class="mb-1">

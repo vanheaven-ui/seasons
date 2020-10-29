@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @category_articles = Article.all.includes(:categories).order('categories.priority, articles.created_at desc').limit(4)
+    @sorted_categories = Category.all.includes(:articles).order('priority').limit(4)
     @articles = Article.all
     @users = User.all.preload(:authored_articles).limit(6)
   end
