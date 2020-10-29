@@ -4,21 +4,13 @@
     <title>Seasons</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <header>
-      <% flash.each do |key, value| %>
-        <%= flash_msgs(key, value) %>
-      <% end %>
-      <%= render 'shared/nav' %>
-    </header>
+    <% flash.each do |key, value| %>
+      <%= flash_msgs(key, value) %>
+    <% end %>
     <%= yield %>
-    <footer>
-      <%= render 'shared/footer' %>
-    </footer> 
   </body>
 </html>

@@ -1,39 +1,42 @@
+<header>
+  <%= render 'shared/nav' %>
+</header>
 <section class="home-page container-fluid">
   <div class="row">
-    <article class="col-12 col-md-9 text-orange p-0 vh-60">
+    <article class="col-12 col-md-9 text-orange p-0 vh-60 p-relative">
       <% if most_votes(@articles).image.attached? %>
-        <div style="background: url(<%= url_for(most_votes(@articles).image) %>); background-size: 100% 100%; height: 100%;" class="ph ph-index">
-      <% end %>
-      <% if most_votes(@articles).categories.exists? %>
-        <%= link_to article.categories.first.name, categories_path, class: 'article-category text-orange' %>
-      <% end %>
-        <%= link_to most_votes(@articles).title, article_path(most_votes(@articles)), class: 'title-index text-white' %>
-    </article>
-    <aside class="col-md-3 user-activity text-white p-0">
-      <h5 class="text-white bg-orange pl-4">User Activity Board</h5>
-      <ul class="list-group">
-        <% @users.each do |user| %>
-          <li class="list-group-item text-orange bg-transparent">
-            <span>@<%= user.username %></span> -
-            <%= pluralize(user.authored_articles.count, 'article') %> -
-            <%= link_to 'Follow', '#', class: 'text-orange' %>
-          </li>
+        <div style="background: url(<%= url_for(most_votes(@articles).image) %>); background-size: 100% 100%; height: 100%;" class="ph ph-index"></div>
         <% end %>
-      </ul>
-    </aside>
-  </div>
-  <div class="row">
-    <% @category_articles.each do |article| %>
-      <article class="col-6 col-md-3 p-0">
-        <% if article.image.attached? %>
-          <div style="background: url(<%= url_for(article.image) %>); background-size: cover;" class="ph ph-index">
-        <% end %>
-        <% if article.categories.any? %>
-          <%= link_to article.categories.first.name, category_path(id: article.categories.first.id), class: 'article-category text-orange' %>
-        <% end %>
-          <%= link_to article.title, article_path(article), class: 'title-index text-white' %>
-        </div> 
+        <div class='featured-text'>
+          <p class="most-voted-title text-orange font-weight-bold"><%= most_votes(@articles).title %></p>
+          <strong><%= link_to most_votes(@articles).text[0..100] + '...', article_path(most_votes(@articles)), class: 'text-white' %></strong>
+         </div> 
       </article>
-    <% end %>
-  </div>
-</section>
+      <aside class="col-md-3 user-activity text-white p-0">
+        <h5 class="text-white bg-orange pl-4">User Activity Board</h5>
+        <ul class="list-group">
+          <% @users.each do |user| %>
+            <li class="list-group-item text-orange bg-transparent">
+              <span>@<%= user.username %></span> -
+              <%= pluralize(user.authored_articles.count, 'article') %> -
+              <%= link_to 'Follow', '#', class: 'text-orange' %>
+            </li>
+          <% end %>
+        </ul>
+      </aside>
+    </div>
+    <div class="row">
+      <% @category_articles.each do |article| %>
+        <article class="col-6 col-md-3 p-0">
+          <% if article.image.attached? %>
+            <div style="background: url(<%= url_for(article.image) %>); background-size: cover;" class="ph ph-index">
+            <% end %>
+            <% if article.categories.any? %>
+              <%= link_to article.categories.first.name, category_path(id: article.categories.first.id), class: 'article-category text-white' %>
+            <% end %>
+            <%= link_to article.title, article_path(article), class: 'title-index text-white' %>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  </section>

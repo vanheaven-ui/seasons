@@ -1,3 +1,10 @@
-<h1 class='text-orange text-center section-title u-white'>New Article</h1>
-
-<%= render 'form', article: @article %>
+<header>
+  <%= render 'shared/nav' %>
+</header>
+<section class="article-form w-75 mx-auto text-white">
+  <h1 class='text-orange text-center section-title u-white'>New Article</h1>
+  <%= render 'form', article: @article %>
+</section>
+<footer class="border">
+  <%= render 'shared/footer' %>
+</footer>

@@ -1,15 +1,5 @@
-<%= form_with(model: article, local: true, class: 'text-white w-75 mx-auto') do |form| %>
-  <% if article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
-      <ul>
-        <% article.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for(@article, local: true, class: 'text-white w-75 mx-auto') do |form| %>
+  <% render 'shared/form_errors', resource: article %>
 
   <div class="form-group">
     <%= form.label :title %>
@@ -30,23 +20,8 @@
 
   <div class="form-group">
     <%= form.label :category_id, 'Category'%>
-    <%= form.collection_select(:category_id, Category.all.order(:name), :id, :name, {}, { class: 'form-control', :prompt => true }) %>
+    <%= form.collection_select(:category_ids, Category.all.order(:name), :id, :name, {}, { class: 'form-control' }) %>
   </div>
-
-  <!-- <div class="field">
-    <%= form.label :category %>
-    <%= fields_for (@category) do |builder| %>
-      <div class="form-control">
-        <%= builder.label :name %>
-        <%= builder.text_field :name, class: '' %>
-      </div>
-
-      <div class="form-control">
-        <%= builder.label :priority %>
-        <%= builder.text_field :priority, class: '' %>
-      </div>
-    <% end %>
-  </div> -->
 
   <div class="actions">
     <p class='text-center'><%= form.submit %></p>

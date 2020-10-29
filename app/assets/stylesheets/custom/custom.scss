@@ -29,6 +29,30 @@ html {
       color: #fff;
     }
 
+    .card-img {
+      position: relative;
+
+      .even-category {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 6px 16px;
+
+        :hover {
+          color: #ff6300;
+          background-color: #fff;
+        }
+      }
+
+      .odd-category {
+        padding: 8px 16px;
+        background-color: #ff63004d;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
     .p-auth {
       padding: 0 50px;
     }
@@ -71,6 +95,14 @@ html {
       height: 40vh;
     }
 
+    .vh-30 {
+      height: 30vh;
+    }
+
+    .p-relative {
+      position: relative;
+    }
+
     .social-links-item {
       display: inline-block;
       background-color: #ff6300;
@@ -78,6 +110,10 @@ html {
       height: 24px;
       border-radius: 50%;
       text-align: center;
+    }
+
+    .article-form {
+      padding: 50px 0;
     }
 
     .ph {
@@ -91,16 +127,9 @@ html {
         transition: all 0.5s ease-out;
 
         :hover {
-          color: white;
+          color: #ff6300;
+          background-color: #fff;
         }
-      }
-
-      .category {
-        padding: 8px 16px;
-        background-color: #ff63004d;
-        position: absolute;
-        bottom: 0;
-        left: 0;
       }
     }
 
@@ -110,6 +139,13 @@ html {
         bottom: 5px;
         left: 15px;
       }
+
+      .featured-text {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+      }
+
 
       .article-category {
         position: absolute;

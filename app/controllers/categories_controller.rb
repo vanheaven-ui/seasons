@@ -16,11 +16,12 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
-    @articles = Article.all.includes(:categories)
+    @sorted_articles = Article.all.includes(:categories).order('articles.created_at desc')
   end
 
   def show
     @category = Category.find(params[:id])
+    @sorted_by_creation_articles = @category.articles.order('created_at desc')
   end
 
   private
