@@ -1,6 +1,4 @@
 module ArticlesHelper
-<<<<<<< HEAD
-=======
   def most_votes(articles)
     most_voted_article = []
     most_votes = 0
@@ -12,5 +10,4 @@ module ArticlesHelper
     end
     most_voted_article.last
   end
->>>>>>> feature/mvp-v1
 end
