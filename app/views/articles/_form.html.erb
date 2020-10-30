@@ -20,7 +20,7 @@
 
   <div class="form-group">
     <%= form.label :category_id, 'Category'%>
-    <%= form.collection_select(:category_ids, Category.all.order(:name), :id, :name, {}, { class: 'form-control' }) %>
+    <%= form.collection_select(:category_ids, Category.order(:name), :id, :name, {}, { class: 'form-control' }) %>
   </div>
 
   <div class="actions">

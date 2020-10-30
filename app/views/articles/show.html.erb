@@ -3,9 +3,9 @@
 </header>
 <section class="show-page mx-auto pt-1">
   <div class="card">
-    <div class="card-img vh-30">
+    <div class="card-img vh-40">
       <% if @article.image.attached? %>
-        <%= image_tag(@article.image.variant(resize: "100%!"), class: 'article-img w-100 vh-30') %>
+        <%= image_tag(@article.image.variant(resize: "100%!"), class: 'article-img w-100 vh-40') %>
       <% end %>
       <a href="#">
         <% if @article.categories.any? %>

@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        ArticleCategory.create(article_id: @article.id, category_id: params[:article][:category_id])
+        ArticleCategory.create(article_id: @article.id, category_id: params[:category_id])
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
