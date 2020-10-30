@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 <h1 class="text-white">Editing Article</h1>
 
 <%= render 'form', article: @article %>
 
+=======
+<header>
+  <%= render 'shared/nav' %>
+</header>
+<h1 class='text-orange text-center section-title u-orange'>Editing Article</h1>
+<%= render 'form', article: @article %>
+>>>>>>> feature/mvp-v1
 <%= link_to 'Show', @article %> |
 <%= link_to 'Back', articles_path %>

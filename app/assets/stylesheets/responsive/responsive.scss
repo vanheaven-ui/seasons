@@ -1,4 +1,5 @@
 @media screen and (max-width: 768px) {
+<<<<<<< HEAD
   #footer-section {
     text-align: center;
   }
@@ -7,3 +8,31 @@
     display: none;
   }
 }
+=======
+  html {
+    body {
+      .sm-center-text {
+        text-align: center;
+      }
+
+      .user-activity {
+        display: none;
+      }
+
+      .p-auth {
+        padding: 0;
+      }
+
+      .navbar-right {
+        .verticle_bar {
+          display: none;
+        }
+      }
+
+      .show-page {
+        width: 100%;
+      }
+    }
+  }
+}
+>>>>>>> feature/mvp-v1

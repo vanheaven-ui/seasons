@@ -4,15 +4,19 @@
     <title>Seasons</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+<<<<<<< HEAD
     <header>
       <%= render 'shared/nav' %>
     </header>
+=======
+    <% flash.each do |key, value| %>
+      <%= flash_msgs(key, value) %>
+    <% end %>
+>>>>>>> feature/mvp-v1
     <%= yield %>
     <footer>
       <%= render 'shared/footer' %>

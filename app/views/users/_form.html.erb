@@ -1,4 +1,5 @@
 <%= form_with(model: user, local: true) do |form| %>
+<<<<<<< HEAD
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -14,14 +15,31 @@
   <div class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, placeholder: 'Enter your name here', class: 'form-control', autofocus: true %>
+=======
+  <%= render 'shared/form_errors', resource: user %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, placeholder: 'Enter your name here', 
+                               class: 'form-control', 
+                               autofocus: true %>
+>>>>>>> feature/mvp-v1
   </div>
 
    <div class="form-group">
     <%= form.label :username %>
+<<<<<<< HEAD
     <%= form.text_field :username, placeholder: 'Enter your name here', class: 'form-control' %>
   </div>
 
   <div class="actions">
     <%= form.submit 'Register', class: 'btn btn-lg btn-primary btn-block' %>
+=======
+    <%= form.text_field :username, placeholder: 'Enter your username here', 
+                                   class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Register', class: 'btn btn-lg btn-orange btn-block' %>
+>>>>>>> feature/mvp-v1
   </div>
 <% end %>

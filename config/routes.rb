@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :articles
   root 'users#index'
+=======
+  resources :articles do
+    resources :votes, only: %i[create destroy]
+  end
+  resources :categories
+  root 'articles#index'
+>>>>>>> feature/mvp-v1
   resources :users, except: %i[new]
   get '/sign_up', to: 'users#new'
   post '/login', to: 'sessions#create'

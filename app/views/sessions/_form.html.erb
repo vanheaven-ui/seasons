@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= form_with(url: '/login', local:true) do |f| %>
   <div class="form-group">
     <%= f.label :username %>
@@ -8,3 +9,18 @@
     <%= f.submit 'Login', class: "btn btn-primary" %>
   </div>
 <% end %>
+=======
+<%= form_with(url: '/login', local: true) do |form| %>
+
+   <div class="form-group">
+    <%= form.label :username %>
+    <%= form.text_field :username, placeholder: 'Enter your username here', 
+                                   class: 'form-control',
+                                   autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Login', class: 'btn btn-orange w-75' %>
+  </div>
+<% end %>
+>>>>>>> feature/mvp-v1

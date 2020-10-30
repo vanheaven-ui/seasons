@@ -1,0 +1,14 @@
+<section class="category-page container-fluid">
+  <div class="row">
+    <% @sorted_articles.each.with_index do |article, index| %>
+      <% if index.odd? %>
+        <%= render 'categories/odd_card', article: article %>
+      <% else %>
+        <%= render 'categories/even_card', article: article %>
+      <% end %>
+    <% end %>
+  </div>
+  <footer class="border">
+    <%= render 'shared/footer'%>
+  </footer>
+</section>

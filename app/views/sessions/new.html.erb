@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section class="login container mt-3 py-md-5 transparent-bg px-md-5">
   <div class="row">
     <div class="col-12 col-md-6 text-center text-white">
@@ -9,6 +10,26 @@
       <h1 class="text-warning">LOGO</h1>
       <h2 class="text-secondary">Enter your username to redeem your access</h2>
       <%= render 'sessions/form'%>
+=======
+<section class="container signup mt-3 py-md-5 transparent-bg p-auth">
+  <div class="row">
+    <div class="col-12 col-md-6 text-center pr-3 text-white d-flex flex-column justify-content-center">
+      <h1 class="text-white u-orange">Your Access</h1>
+      <hr />
+      <p>Thank you for registering. It now time to check if your details are correct. Proceed and login by filling in the form on the right hand side.</p>
+    </div>
+    <div class="col-12 col-md-6 text-center curved-border white-bg py-3">
+      <%= image_tag("header-logo1.png", class: "logo") %>
+      <h2 class="text-secondary">Enter username to login</h2>
+      <hr />
+      <%= render 'sessions/form', user: @user %>
+      <span>
+        Don't have an account?
+        <%= link_to 'Sign Up', sign_up_path %>
+      </span>
+      <br />
+      <%= link_to 'Cancel', root_path %>
+>>>>>>> feature/mvp-v1
     </div>
   </div>
 </section>

@@ -1,10 +1,21 @@
 class ArticlesController < ApplicationController
+<<<<<<< HEAD
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+=======
+  before_action :set_article, only: %i[show edit update destroy]
+  before_action :require_login, except: %i[index]
+>>>>>>> feature/mvp-v1
 
   # GET /articles
   # GET /articles.json
   def index
+<<<<<<< HEAD
     @articles = Article.all
+=======
+    @sorted_categories = Category.all.includes(:articles).order('priority').limit(4)
+    @articles = Article.all
+    @users = User.all.preload(:authored_articles).limit(6)
+>>>>>>> feature/mvp-v1
   end
 
   # GET /articles/1
@@ -22,7 +33,11 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
+<<<<<<< HEAD
     @article = Article.new(article_params)
+=======
+    @article = current_user.authored_articles.build(article_params)
+>>>>>>> feature/mvp-v1
 
     respond_to do |format|
       if @article.save
@@ -60,6 +75,7 @@ class ArticlesController < ApplicationController
   end
 
   private
+<<<<<<< HEAD
     # Use callbacks to share common setup or constraints between actions.
     def set_article
       @article = Article.find(params[:id])
@@ -69,4 +85,16 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title, :text, :author_id)
     end
+=======
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = Article.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def article_params
+    params.require(:article).permit(:title, :text, :image, category_ids: [])
+  end
+>>>>>>> feature/mvp-v1
 end

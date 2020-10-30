@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -17,3 +18,42 @@
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
+=======
+<header>
+  <%= render 'shared/nav' %>
+</header>
+<section class="show-page mx-auto pt-1">
+  <div class="card">
+    <div class="card-img vh-40">
+      <% if @article.image.attached? %>
+        <%= image_tag(@article.image, class: 'article-img w-100 vh-40') %>
+      <% end %>
+      <a href="#">
+        <% if @article.categories.any? %>
+          <span class="even-category text-white transparent-bg"><%= @article.categories.first.name %></span>
+        <% end %>
+      </a>
+    </div>
+    <div class="card-body">
+      <div class='d-flex justify-content-between'>
+        <p class="mb-1">
+          <strong>Written By: </strong>
+          <span class="text-orange"><%= link_to @article.author.name, user_path(@article.author.id) %></span>
+        </p>
+        <span><%= distance_of_time_in_words(Time.now, @article.created_at) %> ago</span>
+      </div>
+      <small>
+        <span class='mr-1 mb-2 text-orange'><strong>Voted</strong></span>
+        <%= pluralize(@article.votes.count, 'time') %>
+      </small>
+      <h5 class="card-title"><strong><%= @article.title %></strong></h5>
+      <p class="card-text"><%= @article.text %></p>
+      <div class="card-footer">
+        <%= link_to 'Edit', edit_article_path(@article) %> |
+        <%= link_to 'Back', articles_path %>
+        <%= vote_or_unvote(@article) %>
+      </div>
+    </div>
+  </div>
+</section>
+>>>>>>> feature/mvp-v1
