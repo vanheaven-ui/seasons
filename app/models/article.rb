@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
   attr_accessor :category_id
-  
+
   belongs_to :author, class_name: 'User'
   has_many :votes, dependent: :destroy
   has_many :article_categories
