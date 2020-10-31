@@ -1,9 +1,17 @@
-.navbar-right {
-  position: relative;
-
-  .verticle-bar {
-    position: absolute;
-    top: 7px;
-    right: 95px;
+nav {
+  .logo-section {
+    a {
+      font-family: 'Roboto', sans-serif;
+    }
   }
+
+  .navbar-right {
+    position: relative;
+  
+    .verticle-bar {
+      position: absolute;
+      top: 7px;
+      right: 95px;
+    }
+  }  
 }
