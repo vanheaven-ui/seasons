@@ -31,7 +31,7 @@ To view the live version of the app, [Click here!]()
 
 ## Data Modelling
 The Entity Relationship Diagram below was provided by microverse to guide the associations between the data models in this project.`
-![ERD]()
+![ERD](/app/assets/images/ERD.jpg)
 
 ## 🔧 Built with<a name = "with"></a>
 

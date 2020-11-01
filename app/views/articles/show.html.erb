@@ -9,7 +9,7 @@
       <% end %>
       <a href="#">
         <% if @article.categories.any? %>
-          <span class="even-category text-white transparent-bg"><%= @article.categories.first.name %></span>
+          <span class="even-category text-white transparent-bg"><%= @article.categories.first.name.upcase %></span>
         <% end %>
       </a>
     </div>
@@ -32,7 +32,7 @@
       <h5 class="card-title"><strong><%= @article.title %></strong></h5>
       <p class="card-text"><%= @article.text %></p>
       <% if @article.comments.any? %>
-        <strong><h3>Comments</h3></strong>     
+        <h6><strong>Comments:</strong></h6>    
         <%= render 'comments/comment' %>
       <% end %>
       <p class="comment-link">

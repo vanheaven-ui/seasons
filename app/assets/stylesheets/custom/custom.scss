@@ -15,6 +15,7 @@ html {
 
   body {
     background-color: #4e443e;
+    font-family: 'Roboto', sans-serif;
 
     .transparent-bg {
       background-color: #ff63004d;
@@ -46,11 +47,13 @@ html {
       bottom: 160px;
       left: 15px;
       border-bottom: 2px solid #cec806;
-      transition: all 0.5s ease-out;
 
       :hover {
-        color: white;
-        text-decoration: none;
+        color: #ff6300;
+      }
+
+      label {
+        margin: 0 8px 0 6px;
       }
     }
 
@@ -105,13 +108,13 @@ html {
 
     .u-white {
       border-bottom: 3px solid #fff;
-      width: auto;
+      width: max-content;
       margin: 0 auto;
     }
 
     .u-orange {
       border-bottom: 3px solid #ff6300;
-      width: auto;
+      width: max-content;
       margin: 0 auto;
     }
 
@@ -191,6 +194,18 @@ html {
           position: absolute;
           bottom: 16px;
           left: 16px;
+        }
+      }
+    }
+
+    .edit_article {
+      color: #fff;
+      width: 75%;
+      margin: 0 auto 12px;
+
+      .form-group {
+        label[for="article_category"] {
+          margin: 0 8px 0 6px;
         }
       }
     }

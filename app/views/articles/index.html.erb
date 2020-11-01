@@ -31,7 +31,7 @@
         <% if category.articles.last.image.attached? %>
           <div style="background: url(<%= url_for(category.articles.last.image) %>); background-size: cover;" class="ph ph-index">
           <% end %>
-          <%= link_to category.name, category_path(id: category.id), class: 'article-category text-white' %>
+          <%= link_to category.name.upcase, category_path(id: category.id), class: 'article-category text-white' %>
           <%= link_to category.articles.last.title, article_path(category.articles.last), class: 'title-index text-white' %>
         </div>
       </article>

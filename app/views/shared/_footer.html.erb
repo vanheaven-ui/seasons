@@ -1,7 +1,10 @@
 <div class="container-fluid">
   <div class="row align-items-center">
     <div class="col-12 col-md-3 sm-center-text">
-      <%= link_to image_tag('footer-logo1.png', class: 'logo'), root_path %>
+      <div class="logo-section">
+        <%= link_to image_tag('footer-logo1.png', class: 'logo'), root_path %>
+        <%= link_to 'Seasons', root_path, class: 'navbar-brand' %>
+      </div>  
     </div>
     <div class="col-12 col-md-6 sm-center-text">
       <span class="text-orange mr-1 pl-5">Privacy Policy.</span>
