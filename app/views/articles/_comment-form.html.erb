@@ -2,7 +2,7 @@
   <%= render 'shared/form_errors', resource: article %>
   <div class="form-group">
     <%= f.label :comment %>
-    <%= f.text_field :comment, class: 'form-control', 
+    <%= f.text_area :comment, class: 'form-control', 
                               placeholder: 'Type your comment', 
                               autofocus:true %>
   </div>
