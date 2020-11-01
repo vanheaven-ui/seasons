@@ -25,8 +25,27 @@
         <span class='mr-1 mb-2 text-orange'><strong>Voted</strong></span>
         <%= pluralize(@article.votes.count, 'time') %>
       </small>
+      <small>
+        <span class='mr-1 mb-2 text-orange'><strong>Comments</strong></span>
+        <%= "(#{@article.comments.count})" %>
+      </small>
       <h5 class="card-title"><strong><%= @article.title %></strong></h5>
       <p class="card-text"><%= @article.text %></p>
+      <% if @article.comments.any? %>
+        <strong><h3>Comments</h3></strong>     
+        <%= render 'comments/comment' %>
+      <% end %>
+      <p class="comment-link">
+        <a class="btn btn-orange" data-toggle="collapse" href="#commentsForm" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Leave a comment
+          <i class= 'fas fa-angle-down'></i>
+        </a>
+      </p>
+      <div class="collapse" id="commentsForm">
+        <div class="card card-body">
+          <%= render 'articles/comment-form', article: @article %>
+        </div>
+      </div>
       <div class="card-footer">
         <%= link_to 'Edit', edit_article_path(@article) %> |
         <%= link_to 'Back', articles_path %>

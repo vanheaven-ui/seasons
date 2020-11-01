@@ -1,8 +1,13 @@
 nav {
   .logo-section {
     a {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 700;
     }
+  }
+
+  .nav-link {
+    font-family: 'Roboto Condensed', sans-serif;
   }
 
   .navbar-right {
@@ -11,7 +16,15 @@ nav {
     .verticle-bar {
       position: absolute;
       top: 7px;
-      right: 95px;
+      left: 60px;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .active {
+        color: #ff6300;
+      }
     }
   }
 }

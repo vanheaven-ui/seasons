@@ -18,11 +18,17 @@
     <ul class="navbar-nav navbar-right ml-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong><%= current_user.name %></strong></a>
+          <a class="nav-link dropdown-toggle text-orange" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong><%= current_user.name %></strong></a>
           <div class="dropdown-menu" aria-labelledby="dropdown04">
-            <a class="dropdown-item" href="#">Profile</a>
-            <a class="dropdown-item" href="#">Activity</a>
-            <%= link_to 'Logout', logout_path, method: :delete, class: 'dropdown-item text-orange' %>
+            <a class="dropdown-item" href="#">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              Profile
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fas fa-tasks" aria-hidden="true"></i>
+              Activity
+            </a>
+            <%= link_to "Logout", logout_path, method: :delete, class: 'dropdown-item text-orange' %>
           </div>
         </li>
       <% else %>
@@ -32,6 +38,9 @@
       <span class="verticle-bar text-muted">|</span>
       <li class="nav-item">
         <%= link_to 'Register', sign_up_path, class: 'nav-link text-uppercase' %>
+      </li>
+      <li>
+        <a class="nav-link"><i class="fa fa-search" aria-hidden="true"></i></a>
       </li>
     <% end %>
     </ul>

@@ -13,14 +13,16 @@
         padding: 0;
       }
 
-      .navbar-right {
-        .verticle_bar {
-          display: none;
-        }
-      }
-
       .show-page {
         width: 100%;
+      }
+
+      .nav {
+        .navbar-right {
+          .verticle_bar {
+            display: none;
+          }
+        }
       }
     }
   }

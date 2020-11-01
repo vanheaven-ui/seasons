@@ -5,4 +5,5 @@ class User < ApplicationRecord
 
   has_many :authored_articles, foreign_key: :author_id, class_name: :Article
   has_many :votes
+  has_many :comments, dependent: :destroy
 end

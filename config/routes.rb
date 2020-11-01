@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :articles do
     resources :votes, only: %i[create destroy]
+    resources :comments, only: %i[create]
   end
   resources :categories
   root 'articles#index'
