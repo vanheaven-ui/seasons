@@ -69,13 +69,14 @@ If you don't meet the above preliquisites, then:
 
 - Visit [Ruby Installations](https://www.ruby-lang.org/en/documentation/installation/) to install ruby version  2.7.0.
 - Visit [Rails installations guide](https://guides.rubyonrails.org/v5.0/getting_started.html) to install rails version 6.0.3.3.
+- Then run the following commands in the terminal.
+  * Run ``bundle install`` in the terminal to install gems and their dependencies.
+  * Run ``yarn install`` in the terminal to install packages in the package.json file.
 
 ###  App <a name = "app"></a>
 With the installations above complete, you are set to use the code and view the application built in this repository. Follow these simple steps:
 
 - Change directory into the directory where you cloned the repository. Forexample ``vanheaven@vanheaven-VirtualBox:~/Microverse-projects$ cd private-event.``
-- Run ``bundle install`` in the terminal to install gems and their dependencies.
-- Run ``yarn install`` in the terminal to install packages in the package.json file.
 - Run ``rails db:create`` to create the database.
 - Run ``rails db:migrate`` to update the database.
 - Run ``rails s`` or ``rails server`` in the terminal to start the server.
