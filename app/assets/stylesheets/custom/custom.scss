@@ -33,7 +33,7 @@ html {
       background-color: #ff6300;
     }
 
-    mb-50 {
+    .mb-50 {
       margin-bottom: 50px;
     }
 
@@ -102,6 +102,11 @@ html {
 
     .p-auth {
       padding: 0 50px;
+    }
+
+    .spacer {
+      margin: 16px 0;
+      display: block;
     }
 
     .section-title {

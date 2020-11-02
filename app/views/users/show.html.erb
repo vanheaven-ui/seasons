@@ -1,14 +1,19 @@
+<header>
+  <%= render 'shared/nav' %>
+</header>
 <section class="user-page w-50 mx-auto pt-3">
   <h2 class="text-orange"><%= @user.name%>'s Profile</h2>
   <ul class="list-group">
     <h3 class="text-white u-orange mb-3">Articles Authored</h3>
     <% @written_articles.each do |article| %>
       <li class="list-group-item">
-        <span class='mr-2'>+ <%= article.title %></span>
+        <span class='mr-2'>+ <%= link_to article.title, article_path(article) %></span>
       </li>
     <% end %>
   </ul>
-
   <%= link_to 'Edit', edit_user_path(@user) %> |
   <%= link_to 'Back', users_path %>
 </section>
+<footer class="border">
+  <%= render 'shared/footer' %>
+</footer>

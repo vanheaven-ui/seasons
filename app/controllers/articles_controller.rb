@@ -1,3 +1,5 @@
+# rubocop: disable Layout/LineLength
+
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
   before_action :require_login, except: %i[index]
@@ -6,7 +8,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @sorted_categories = Category.all.includes(:articles).order('priority').limit(4)
-    @most_voted_article = Article.find(Vote.where.not(article_id: [nil, false]).group(:article_id).count.max_by { |_k, v| v }.first)
+    @most_voted_article = Article.find(Vote.where.not(article_id: [nil, false]).group(:article_id).count.max_by { |_k, v| v }[0])
     @articles = Article.all
     @users = User.all.preload(:authored_articles).limit(6).where.not(id: [nil, false])
   end
@@ -75,3 +77,4 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :text, :image, category_ids: [])
   end
 end
+# rubocop: enable Layout/LineLength
