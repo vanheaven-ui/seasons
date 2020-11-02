@@ -1,13 +1,15 @@
 <div align="center">
-  <img src="/app/assets/images/header-logo1.png" width="80px" height="80px">
+  <img src="/app/assets/images/header-logo1.png" width="80px" height="80px" style="margin-bottom: -20px;">
   <h1><b>Seasons</b></h1>
-</div>
+
 
 This project is about building an application where users can write articles on various categories of seasons in life.
   
 [![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/vanheaven-ui/seasons/issues)
 [![GitHub Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/vanheaven-ui/seasons/pulls)
 [![Author](https://img.shields.io/badge/Github-Author-black)](https://github.com/vanheaven-ui)
+
+</div>
 
 ## Index Page Screenshot
 
