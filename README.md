@@ -1,5 +1,7 @@
-   <img src="/app/assets/images/header-logo1.png" width="40px" height="40px">
-  # Seasons
+<div align="center">
+  <img src="/app/assets/images/header-logo1.png" width="80px" height="80px">
+  <h1><b>Seasons</b></h1>
+</div>
 
 This project is about building an application where users can write articles on various categories of seasons in life.
   
