@@ -6,9 +6,9 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @sorted_categories = Category.all.includes(:articles).order('priority').limit(4)
-    @most_voted_article = Article.find(Vote.where.not(article_id: nil).group(:article_id).count.max_by { |_k, v| v }.first)
+    @most_voted_article = Article.find(Vote.where.not(article_id: [nil, false]).group(:article_id).count.max_by { |_k, v| v }.first)
     @articles = Article.all
-    @users = User.all.preload(:authored_articles).limit(6)
+    @users = User.all.preload(:authored_articles).limit(6).where.not(id: [nil, false])
   end
 
   # GET /articles/1
