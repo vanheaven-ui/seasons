@@ -4,12 +4,12 @@
 This project is about building an application where users can write articles on various categories of seasons in life.
   
 [![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/vanheaven-ui/seasons/issues)
-[![GitHub Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/vanheaven-ui/events/pull/1)
+[![GitHub Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/vanheaven-ui/seasons/pulls)
 [![Author](https://img.shields.io/badge/Github-Author-black)](https://github.com/vanheaven-ui)
 
 ## Index Page Screenshot
 
-<img src="#">
+![Screenshot]("/app/assets/images/screenshot-seasons.png")
 
 ## Content
 
@@ -39,10 +39,11 @@ The Entity Relationship Diagram below was provided by microverse to guide the as
 - Rails 6.0.3.3
 - Bootstrap
 - Gems/Dependencies
-  - [ ] rubocop (0.81.0)
-  - [ ] rspec-rails (4.0.1)
-  - [ ] capybara (3.33.0)
-  - [ ] shoulda-matchers (4.4.1)
+***
+  - [x] rubocop (0.81.0)
+  - [x] rspec-rails (4.0.1)
+  - [x] capybara (3.33.0)
+  - [x] shoulda-matchers (4.4.1)
 
 ## Usage <a name = "usage"></a>
 To use the code in this repository, follow the steps in this section:
@@ -70,12 +71,14 @@ With the installations above complete, you are set to use the code and view the 
 
 - Change directory into the directory where you cloned the repository. Forexample ``vanheaven@vanheaven-VirtualBox:~/Microverse-projects$ cd private-event.``
 - Run ``bundle install`` in the terminal to install gems and their dependencies.
+- Run ``yarn install`` in the terminal to install packages in the package.json file.
+- Run ``rails db:create`` to create the database.
 - Run ``rails db:migrate`` to update the database.
 - Run ``rails s`` or ``rails server`` in the terminal to start the server.
 - Once the server starts(Might take about 3-5 minutes), you can access the application by typing localhost:3000 in your browser and striking ``Enter``.
 
 ## Testing <a name = "tests"></a>
-The tests in this repository were written using Rspec and capybara. So to run these tests successfully on your computer, follow the steps below;
+The tests in this repository were written using Rspec, shoulda-matchers, and capybara. So to run these tests successfully on your computer, follow the steps below;
 * Crosscheck to make sure that your Gemfile has _**rails-rspec**_ in the development block and _**capybara**_ in the test block. See this example:
    ```<pre>
     group :development do
@@ -92,7 +95,7 @@ The tests in this repository were written using Rspec and capybara. So to run th
       gem 'selenium-webdriver'
       gem 'webdrivers'
     end
- * Follow [SettingUp RSpec and Capybara](https://madeintandem.com/blog/setting-up-rspec-and-capybara-in-rails-5-for-testing/) guide to fully setup rails and capybara.
+ * The guide on [SettingUp RSpec and Capybara](https://madeintandem.com/blog/setting-up-rspec-and-capybara-in-rails-5-for-testing/) was followed to set up Rspec and Capybara.
  * Then run ``rspec`` in the terminal.
 
 ## ✒️  Authors <a name = "author"></a>
