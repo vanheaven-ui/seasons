@@ -13,7 +13,7 @@ This project is about building an application where users can write articles on 
 
 ## Index Page Screenshot
 
-![Screenshot]("/app/assets/images/screenshot-seasons.png")
+![Screenshot](/app/assets/images/screenshot-seasons.png)
 
 ## Content
 
