@@ -20,4 +20,10 @@ nav {
       left: 60px;
     }
   }
+
+  navbar-nav {
+    .active {
+      color: #ff6300;
+    }
+  }
 }

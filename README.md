@@ -1,7 +1,7 @@
-   ![Logo]()
+   ![Logo](/app/assets/images/header-logo1.png)
   # Seasons
 
-This project is about building an application where users can write articles about various categories of seasons in life.
+This project is about building an application where users can write articles on various categories of seasons in life.
   
 [![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/vanheaven-ui/seasons/issues)
 [![GitHub Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/vanheaven-ui/events/pull/1)
@@ -23,10 +23,10 @@ This project is about building an application where users can write articles abo
 
 
 ## About <a name = "about"></a>
-This project was a task by Microverse Inc to build an application with the design by [Guy's name on behance](). The application should accomplish certain tasks that include; a user sign in by entering a username, a user should be able to write an article with a specific category attached to it, users should be able to vote on the different categories.As an extra, I have include a feature where users can leave comments on articles in this application.
+This project was a task by Microverse Inc. to build an application with the design by [nelson Sakwa on behance](). The application should accomplish certain tasks that include; a user should login by entering a username, a user should be able to write an article with a specific category(s) attached to it, users should be able to vote on the different categories.As an extra, I have included a feature where users can leave comments on articles in this application.
 
 ## App Deployment
-The built app was deployed to heroku by the guide on [Heroku deployment for rails 6.X](https://devcenter.heroku.com/articles/getting-started-with-rails6).
+The built app was deployed to heroku by following the guide on [Heroku deployment for rails 6.X](https://devcenter.heroku.com/articles/getting-started-with-rails6). <br />
 To view the live version of the app, [Click here!]()
 
 ## Data Modelling
@@ -37,6 +37,7 @@ The Entity Relationship Diagram below was provided by microverse to guide the as
 
 - ruby 2.7.0p0 (2019-12-25 revision 647ee6f091)
 - Rails 6.0.3.3
+- Bootstrap
 - Gems/Dependencies
   - [ ] rubocop (0.81.0)
   - [ ] rspec-rails (4.0.1)
