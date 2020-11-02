@@ -5,6 +5,7 @@ RSpec.describe Article, type: :model do
     it { should have_many(:article_categories) }
     it { should have_many(:categories) }
     it { should have_many(:votes) }
+    it { should have_many(:comments) }
   end
 
   describe 'validations' do

@@ -4,6 +4,7 @@ RSpec.describe User, type: :model do
   describe 'Associations' do
     it { should have_many(:authored_articles).class_name('Article') }
     it { should have_many(:votes) }
+    it { should have_many(:comments) }
   end
 
   describe 'validations' do
