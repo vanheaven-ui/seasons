@@ -1,4 +1,4 @@
-   ![Logo](/app/assets/images/header-logo1.png)
+   <img src="/app/assets/images/header-logo1.png" width="40px" height="40px">
   # Seasons
 
 This project is about building an application where users can write articles on various categories of seasons in life.
