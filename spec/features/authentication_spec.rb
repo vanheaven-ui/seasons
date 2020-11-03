@@ -6,7 +6,7 @@ RSpec.feature 'Visitor Signup', type: :feature do
     fill_in :Name, with: 'user'
     fill_in :Username, with: 'username'
     click_on 'Create User'
-    expect(:page).to have_text('Sign up successful')
+    expect(:page).to have_text('Your Access')
   end
 end
 
