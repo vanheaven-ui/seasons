@@ -1,14 +1,10 @@
 nav {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 
   .logo-section {
     a {
       font-weight: 700;
     }
-  }
-
-  .active {
-    color: #ff6300;
   }
 
   .navbar-right {
@@ -20,10 +16,8 @@ nav {
       left: 55px;
     }
   }
+}
 
-  .navbar-nav {
-    .active {
-      color: #ff6300;
-    }
-  }
+.active {
+  color: #ff6300;
 }

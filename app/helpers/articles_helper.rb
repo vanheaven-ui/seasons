@@ -8,6 +8,6 @@ module ArticlesHelper
         most_voted_articles << article
       end
     end
-    most_voted_articles[-1]
+    most_voted_articles.compact[-1]
   end
 end
