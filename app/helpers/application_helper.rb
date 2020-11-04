@@ -1,9 +1,9 @@
 module ApplicationHelper
   def flash_msgs(key, value)
     if key == 'notice'
-      content_tag('span', value, class: 'alert alert-success text-center text-bold', style: 'width: fit-content')
+      content_tag('span', value, class: 'alert alert-success text-center mb-0 px-3 py-0 text-bold d-block mx-auto', style: 'width: fit-content')
     elsif key == 'alert'
-      content_tag('span', value, class: 'alert alert-danger text-center text-bold', style: 'width: fit-content')
+      content_tag('span', value, class: 'alert alert-danger text-center mb-0 px-3 py-0 text-bold d-block mx-auto', style: 'width: fit-content')
     end
   end
 

@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Roboto';
-  src: url('/assets/Roboto-Bold');
-  src: url('/assets/Roboto-Regular');
+  font-family: "Roboto";
+  src: url("/assets/Roboto-Bold");
+  src: url("/assets/Roboto-Regular");
 }
 
 @font-face {
-  font-family: 'Roboto Condensed';
-  src: url('/assets/RobotoCondensed-Bold');
-  src: url('/assets/RobotoCondensed-Regular');
+  font-family: "Roboto Condensed";
+  src: url("/assets/RobotoCondensed-Bold");
+  src: url("/assets/RobotoCondensed-Regular");
 }
 
 html {
@@ -15,7 +15,7 @@ html {
 
   body {
     background-color: #4e443e;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 
     .transparent-bg {
       background-color: #ff63004d;
@@ -31,6 +31,29 @@ html {
 
     .bg-orange {
       background-color: #ff6300;
+    }
+
+    .border {
+      width: 100%;
+      height: 5px;
+      background-color: #fff;
+      position: relative;
+
+      .progress-bar1 {
+        width: 20%;
+        background-color: #ff6300;
+        height: 5px;
+      }
+
+      .progress-bar2 {
+        width: 40%;
+        background-color: #5757ec89;
+        height: 5px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 20%;
+      }
     }
 
     .mb-50 {
@@ -64,13 +87,13 @@ html {
     section {
       aside {
         h5 {
-          font-family: 'Roboto', sans-serif;
+          font-family: "Roboto", sans-serif;
           font-weight: 700;
         }
 
         span,
         a {
-          font-family: 'Roboto', sans-serif;
+          font-family: "Roboto", sans-serif;
           font-weight: 400;
         }
       }
