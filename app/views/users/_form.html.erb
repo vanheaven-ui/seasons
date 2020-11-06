@@ -1,4 +1,4 @@
-<%= form_with(model: user, local: true) do |form| %>
+<%= form_with(model: user, local: true, html: { class: 'mb-4' }) do |form| %>
   <%= render 'shared/form_errors', resource: user %>
   <div class="form-group">
     <%= form.label :name %>
