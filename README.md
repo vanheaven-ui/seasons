@@ -133,5 +133,5 @@ And your reward awaits in heaven.
 Give a ⭐️ if you like this project!
 
 ## :clap: Acknowledgements
-[The Odin project Guide:](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)<br />
-[Microverse guide:](https://microverse.pathwright.com/library/fast-track-curriculum/69047/path/step/49722686/)
+[Microverse specifications](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561#e52fab8f5c874cb9853328caef637425)
+
