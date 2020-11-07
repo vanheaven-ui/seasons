@@ -7,6 +7,10 @@ nav {
     }
   }
 
+  .active {
+    color: #ff6300;
+  }
+
   .navbar-right {
     position: relative;
 
@@ -18,6 +22,6 @@ nav {
   }
 }
 
-.active {
+.navbar-light .navbar-nav .nav-link.active {
   color: #ff6300;
 }

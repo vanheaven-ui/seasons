@@ -3,6 +3,38 @@
 </header>
 <section class="show-page mx-auto pt-1">
   <div class="card">
+    <h5 class="card-title article-h text-center mb-0"><strong><%= @article.title %></strong></h5>
+    <hr />
+    <div class='d-flex justify-content-around'>
+      <p class="mb-1">
+        <strong>Written By: </strong>
+        <span class="text-orange">
+          <%= link_to user_path(@article.author.id) do %>
+            <%= @article.author.name %>
+            <a class="social-links-item text-dark" href="#">
+              <i class="fab fa-facebook-f fa-1x"></i>
+            </a>
+            <a class="social-links-item text-dark" href="#">
+              <i class="fab fa-twitter fa-1x"></i>
+            </a>
+            <a class="social-links-item text-dark" href="#">
+              <i class="fab fa-instagram fa-1x"></i>
+            </a>
+          <% end %>
+        </span>
+      </p>
+      <span><%= distance_of_time_in_words(Time.now, @article.created_at) %> ago</span>
+    </div>
+    <p class="statistics text-center">
+    <small>
+      <span class='mr-1 mb-2 text-orange'><strong>Voted</strong></span>
+      <%= pluralize(@article.votes.count, 'time') %>
+    </small>
+    <small>
+      <span class='mr-1 mb-2 text-orange'><strong>Comments</strong></span>
+      <%= "(#{@article.comments.count})" %>
+    </small>
+    </p>
     <div class="card-img vh-60">
       <% if @article.image.attached? %>
         <%= image_tag(@article.image, class: 'article-img w-100 vh-60') %>
@@ -14,25 +46,9 @@
       </a>
     </div>
     <div class="card-body">
-      <div class='d-flex justify-content-between'>
-        <p class="mb-1">
-          <strong>Written By: </strong>
-          <span class="text-orange"><%= link_to @article.author.name, user_path(@article.author.id) %></span>
-        </p>
-        <span><%= distance_of_time_in_words(Time.now, @article.created_at) %> ago</span>
-      </div>
-      <small>
-        <span class='mr-1 mb-2 text-orange'><strong>Voted</strong></span>
-        <%= pluralize(@article.votes.count, 'time') %>
-      </small>
-      <small>
-        <span class='mr-1 mb-2 text-orange'><strong>Comments</strong></span>
-        <%= "(#{@article.comments.count})" %>
-      </small>
-      <h5 class="card-title"><strong><%= @article.title %></strong></h5>
       <p class="card-text"><%= @article.text %></p>
       <% if @article.comments.any? %>
-        <h6><strong>Comments:</strong></h6>    
+        <h6><strong>Comments:</strong></h6>
         <%= render 'comments/comment' %>
       <% end %>
       <p class="comment-link">
@@ -47,8 +63,12 @@
         </div>
       </div>
       <div class="card-footer">
+        <strong><i class='fas fa-edit text-orange' aria-hidden="true"></i></strong>
         <%= link_to 'Edit', edit_article_path(@article) %> |
-        <%= link_to 'Back', articles_path %>
+        <%= link_to articles_path do %>
+          <strong><i class='fa fa-home text-orange' aria-hidden="true"></i></strong>
+          Home
+        <% end %>
         <%= vote_or_unvote(@article) %>
       </div>
     </div>
