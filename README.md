@@ -43,7 +43,6 @@ The Entity Relationship Diagram below was provided by microverse to guide the as
 - Rails 6.0.3.3
 - Bootstrap
 - Gems/Dependencies
-***
   - [x] rubocop (0.81.0)
   - [x] rspec-rails (4.0.1)
   - [x] capybara (3.33.0)
