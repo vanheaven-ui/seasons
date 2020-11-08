@@ -36,21 +36,14 @@
     </small>
     </p>
     <div class="card-img vh-60">
-      <% if @article.image.attached? %>
-        <%= image_tag(@article.image, class: 'article-img w-100 vh-60') %>
-      <% end %>
+      <%= article_image_attached_check(@article) %>
       <a href="#">
-        <% if @article.categories.any? %>
-          <span class="even-category text-white transparent-bg"><%= @article.categories.first.name.upcase %></span>
-        <% end %>
+        <%= article_categories_exist_check(@article) %>
       </a>
     </div>
     <div class="card-body">
       <p class="card-text"><%= @article.text %></p>
-      <% if @article.comments.any? %>
-        <h6><strong>Comments:</strong></h6>
-        <%= render 'comments/comment' %>
-      <% end %>
+      <%= article_comments_exist_check(@article) %>
       <p class="comment-link">
         <a class="btn btn-orange" data-toggle="collapse" href="#commentsForm" role="button" aria-expanded="false" aria-controls="collapseExample">
           Leave a comment

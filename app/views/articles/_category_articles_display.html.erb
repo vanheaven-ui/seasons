@@ -1,0 +1,4 @@
+<div style="background: url(<%= url_for(category.articles.to_a.compact.last.image) %>); background-size: cover;" class="ph ph-index">
+  <%= link_to category.name.capitalize, category_path(id: category.id), class: 'article-category text-white' %>
+  <%= link_to category.articles.last.title, article_path(category.articles.to_a.compact.last), class: 'title-index text-white' %>
+</div>

@@ -1,9 +1,10 @@
 <div class="article-comments">
+  <h6><strong>Comments:</strong></h6>
   <% @article.comments.each do |comment| %>
     <div class='card card-body'>
       <small><strong class="mr-1"><%= comment.user.name %></strong>left a comment 
-      <%= distance_of_time_in_words(Time.now, comment.created_at) %> ago</small><br />
+        <%= distance_of_time_in_words(Time.now, comment.created_at) %> ago</small><br />
       <%= comment.comment %>
     </div>
-  <% end %> 
+  <% end %>
 </div>
