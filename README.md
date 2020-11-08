@@ -31,7 +31,7 @@ This project was a task by Microverse Inc. to build an application with the desi
 
 ## App Deployment
 The built app was deployed to heroku by following the guide on [Heroku deployment for rails 6.X](https://devcenter.heroku.com/articles/getting-started-with-rails6). <br />
-To view the live version of the app, [Click here!](https://warm-atoll-74780.herokuapp.com)
+To view the live version of the app, [click here!](https://life-seasons.herokuapp.com/)
 
 ## Data Modelling
 The Entity Relationship Diagram below was provided by microverse to guide the associations between the data models in this project.`
