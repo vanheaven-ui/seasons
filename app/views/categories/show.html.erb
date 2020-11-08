@@ -1,33 +1,5 @@
 <section class="category-articles-page container-fluid">
-  <% if @category.articles.any? %>
-    <div class="row">
-      <% @sorted_by_creation_articles.each.with_index do |article, index| %>
-        <% if index.odd? %>
-          <%= render 'categories/odd_card', article: article %>
-        <% else %>
-          <%= render 'categories/even_card', article: article %>
-        <% end %>
-      <% end %>
-    </div>
-  <% else %>
-    <div class="card card-body">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th><Priority></th>
-            <th colspan='3'></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><%= @category.name %></td>
-            <td><%= @category.priority %></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  <% end %>
+  <%= category_display(@category) %>
 </section>
 <%= link_to root_path, class: 'w-100 mx-auto' do %>
   <strong><i class='fa fa-home text-orange'></i></strong>

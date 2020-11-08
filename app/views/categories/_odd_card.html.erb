@@ -6,13 +6,9 @@
       <%= link_to 'read more...', article_path(article), class: 'text-orange' %>
     </div>
     <div class="card-img vh-40">
-      <% if article.image.attached? %>
-        <%= image_tag(article.image, class: 'article-img w-100 vh-40') %>
-      <% end %>
+      <%= category_article_image_check(article) %>
       <a href="#">
-        <% if article.categories.any? %>
-          <span class="odd-category text-white transparent-bg"><%= article.categories.first.name.upcase %></span>
-        <% end %>
+        <%= article_categories_exist_check_odd(article) %>
       </a>
     </div>
   </div>

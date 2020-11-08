@@ -21,4 +21,12 @@ module ApplicationHelper
                                                           method: :post)
     end
   end
+
+  def signed_in_or_not_manager
+    if user_signed_in?
+      render 'shared/logged_in'
+    else
+      render 'shared/not_signed_in'
+    end
+  end
 end
