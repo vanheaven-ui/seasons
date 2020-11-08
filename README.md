@@ -3,7 +3,7 @@
   <h1><b>Seasons</b></h1>
 
 
-This project is about building an application where users can write articles on various categories of seasons in life.
+This is an application where users can write articles on various seasons in life.
   
 [![Github Issues](https://img.shields.io/badge/GitHub-Issues-orange)](https://github.com/vanheaven-ui/seasons/issues)
 [![GitHub Pull Requests](https://img.shields.io/badge/GitHub-Pull%20Requests-blue)](https://github.com/vanheaven-ui/seasons/pulls)
@@ -27,11 +27,11 @@ This project is about building an application where users can write articles on 
 
 
 ## About <a name = "about"></a>
-This project was a task by Microverse Inc. to build an application with the design by [nelson Sakwa on behance](). The application should accomplish certain tasks that include; a user should login by entering a username, a user should be able to write an article with a specific category(s) attached to it, users should be able to vote on the different categories.As an extra, I have included a feature where users can leave comments on articles in this application.
+This project was a task by Microverse Inc. to build an application with the design by [Nelson Sakwa on behance](https://mir-s3-cdn-cf.behance.net/project_modules/disp/c498ab14554909.56285e690f20a.png). The application should accomplish certain tasks that include; a user should login by entering a username, a user should be able to write an article with a specific category(s) attached to it, users should be able to vote on the different categories.As an extra, I included a feature where users can leave comments on articles in this application.
 
 ## App Deployment
 The built app was deployed to heroku by following the guide on [Heroku deployment for rails 6.X](https://devcenter.heroku.com/articles/getting-started-with-rails6). <br />
-To view the live version of the app, [Click here!]()
+To view the live version of the app, [Click here!](https://warm-atoll-74780.herokuapp.com)
 
 ## Data Modelling
 The Entity Relationship Diagram below was provided by microverse to guide the associations between the data models in this project.`
@@ -43,7 +43,6 @@ The Entity Relationship Diagram below was provided by microverse to guide the as
 - Rails 6.0.3.3
 - Bootstrap
 - Gems/Dependencies
-***
   - [x] rubocop (0.81.0)
   - [x] rspec-rails (4.0.1)
   - [x] capybara (3.33.0)
@@ -133,5 +132,5 @@ And your reward awaits in heaven.
 Give a ⭐️ if you like this project!
 
 ## :clap: Acknowledgements
-[The Odin project Guide:](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)<br />
-[Microverse guide:](https://microverse.pathwright.com/library/fast-track-curriculum/69047/path/step/49722686/)
+[Microverse specifications](https://www.notion.so/Lifestyle-articles-b82a5f10122b4cec924cd5d4a6cf7561#e52fab8f5c874cb9853328caef637425)
+
