@@ -28,10 +28,4 @@ module ArticlesHelper
       render 'comments/comment', locals: { resource: resource }
     end
   end
-
-  def articles_images_check(resources)
-    if resources.collect(&:image).detect(&:attached)
-      render 'articles/most_voted_article_display', locals: { resources: resources }
-    end
-  end
 end
