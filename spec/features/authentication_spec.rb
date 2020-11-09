@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Authentication', type: :feature do
+RSpec.feature 'Authentication', type: :feature do # rubocop: disable Metrics/BlockLength
   before :each do
     user = User.new(name: 'Ezekiel', username: 'ezeko')
     user.save

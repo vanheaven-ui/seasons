@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if @user
       session[:user_id] = @user.id
       redirect_to root_path, notice: 'Login successful, enjoy!'
-    elsif params[:username].size == 0
+    elsif params[:username].empty?
       redirect_to login_path, alert: 'Username cannot be blank'
     elsif params[:username].size < 3
       redirect_to login_path, alert: 'Username is too short(minimum length is 3)'

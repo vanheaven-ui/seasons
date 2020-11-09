@@ -31,8 +31,6 @@ module ApplicationHelper
   end
 
   def authorize_edit(resource)
-    if can? :update, resource
-      render 'articles/edit_link'
-    end
+    render 'articles/edit_link' if can? :update, resource
   end
 end
