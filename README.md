@@ -51,7 +51,7 @@ The Entity Relationship Diagram below was provided by microverse to guide the as
 ## Usage <a name = "usage"></a>
 To use the code in this repository, follow the steps in this section:
 
-### 🔨 Preliquisites
+### 🔨 Prerequisites
  You should have the following packages installed on your computer inorder to run the code contained herein.
 
 - Ruby version ``ruby 2.7.0p0 (2019-12-25 revision 647ee6f091)``. 
@@ -64,7 +64,7 @@ First get a copy of the project on your computer:
 
 ### 🛠 Installing <a name = "ins"></a>
 Once you have a local copy of the entire project on your computer,
-If you don't meet the above preliquisites, then:
+If you don't meet the above prerequisites, then:
 
 - Visit [Ruby Installations](https://www.ruby-lang.org/en/documentation/installation/) to install ruby version  2.7.0.
 - Visit [Rails installations guide](https://guides.rubyonrails.org/v5.0/getting_started.html) to install rails version 6.0.3.3.

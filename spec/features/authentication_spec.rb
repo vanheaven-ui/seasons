@@ -11,7 +11,7 @@ RSpec.feature 'Authentication', type: :feature do
       visit '/login'
       fill_in :username, with: :Ezekiel
       click_button 'Login'
-      expect(page).to have_text('Your Access')
+      expect(page).to have_text('Your Accesss')
     end
 
     scenario 'User cannot sign in' do
