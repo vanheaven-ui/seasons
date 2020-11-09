@@ -1,5 +1,5 @@
-<%= form_for(article, local: true, html: { class: 'text-white w-75 mx-auto' }) do |form| %>
-  <% render 'shared/form_errors', resource: article %>
+<%= form_for(@article, local: true, html: { class: 'text-white w-75 mx-auto' }) do |form| %>
+  <%= render 'shared/form_errors', resource: @article %>
 
   <div class="form-group">
     <%= form.label :title %>

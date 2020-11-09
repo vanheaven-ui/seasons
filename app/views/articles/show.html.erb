@@ -56,8 +56,7 @@
         </div>
       </div>
       <div class="card-footer">
-        <strong><i class='fas fa-edit text-orange' aria-hidden="true"></i></strong>
-        <%= link_to 'Edit', edit_article_path(@article) %> |
+        <%= authorize_edit(@article) %>
         <%= link_to articles_path do %>
           <strong><i class='fa fa-home text-orange' aria-hidden="true"></i></strong>
           Home

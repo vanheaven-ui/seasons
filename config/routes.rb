@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :votes, only: %i[create destroy]
     resources :comments, only: %i[create]
   end
-  resources :categories
+  resources :categories, except: %i[edit update destroy]
   root 'articles#index'
   resources :users, except: %i[new]
   get '/sign_up', to: 'users#new'

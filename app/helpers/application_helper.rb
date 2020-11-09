@@ -29,4 +29,10 @@ module ApplicationHelper
       render 'shared/not_signed_in'
     end
   end
+
+  def authorize_edit(resource)
+    if can? :update, resource
+      render 'articles/edit_link'
+    end
+  end
 end
