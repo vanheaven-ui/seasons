@@ -31,7 +31,7 @@ RSpec.feature 'Authentication', type: :feature do # rubocop: disable Metrics/Blo
       expect(page).to have_text('Username is too short (minimum is 3 characters)')
     end
 
-    scenario 'User cannot sign up with username shorter than 3 characters' do
+    scenario 'User cannot sign up with name shorter than 3 characters' do
       visit '/sign_up'
       fill_in 'user[name]', with: 'Ez'
       fill_in 'user[username]', with: 'ezeko'
