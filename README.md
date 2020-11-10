@@ -78,6 +78,7 @@ With the installations above complete, you are set to use the code and view the 
 - Change directory into the directory where you cloned the repository. Forexample ``vanheaven@vanheaven-VirtualBox:~/Microverse-projects$ cd private-event.``
 - Run ``rails db:create`` to create the database.
 - Run ``rails db:migrate`` to update the database.
+- Run  ``rails db:seed`` to prepopulate the database.
 - Run ``rails s`` or ``rails server`` in the terminal to start the server.
 - Once the server starts(Might take about 3-5 minutes), you can access the application by typing localhost:3000 in your browser and striking ``Enter``.
 
