@@ -1,0 +1,19 @@
+<%= form_with(model: user, local: true, html: { class: 'mb-4' }) do |form| %>
+  <%= render 'shared/form_errors', resource: user %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, placeholder: 'Enter your name here', 
+                               class: 'form-control', 
+                               autofocus: true %>
+  </div>
+
+   <div class="form-group">
+    <%= form.label :username %>
+    <%= form.text_field :username, placeholder: 'Enter your username here', 
+                                   class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

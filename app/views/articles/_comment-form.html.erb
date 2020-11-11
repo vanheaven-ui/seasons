@@ -1,0 +1,15 @@
+<%= form_with(url: article_comments_path(article), method: :post, local: true) do |f| %>
+  <%= render 'shared/form_errors', resource: article %>
+  <div class="form-group">
+    <%= f.label :comment %>
+    <%= f.text_area :comment, class: 'form-control', 
+                              placeholder: 'Type your comment', 
+                              autofocus:true %>
+  </div>
+
+  <%= f.hidden_field :article_id, value: article.id %>
+
+  <div class="actions text-center">
+    <%= f.submit 'Post Comment', class: 'transparent-bg text-orange curved-border' %>
+  </div>
+<% end %>

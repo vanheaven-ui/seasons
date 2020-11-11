@@ -3,12 +3,22 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+# Connect activestorage to AWS s3 API
+gem 'aws-sdk-s3', require: false
+
+# Set Environment variables
+gem 'dotenv-rails', groups: %i[development test]
+
+# Use CanCan for authorization
+gem 'cancan'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
+# USe Figaro to configure environment variables
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker

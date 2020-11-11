@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-md navbar-light bg-white">
+  <div class="logo-section">
+    <%= link_to image_tag('header-logo1.png', class: 'logo'), root_path %>
+    <%= link_to 'Seasons', root_path, class: 'navbar-brand' %>
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse show" id="navbarsExample04" style="">
+    <ul class="navbar-nav text-uppercase mx-auto">
+      <li class="nav-item">
+        <%= link_to 'Home', root_path, class: "nav-link active" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Write Article',new_article_path, class: "nav-link" %>
+      </li>
+    </ul>
+    <ul class="navbar-nav navbar-right ml-auto">
+      <%= signed_in_or_not_manager %>
+    </ul>
+  </div>
+</nav>
+<div class="border-b">
+  <div class="progress-bar1"></div>
+  <span class="progress-bar2"></span>
+</div>
+

@@ -1,0 +1,15 @@
+<article class="col-6 col-md-3 p-0">
+  <div class="card border-0">
+    <div class="card-img vh-40">
+      <%= category_article_image_check(article) %>
+      <a href="#">
+        <%= article_categories_exist_check(article) %>
+      </a>
+    </div>
+    <div class="card-body vh-40">
+      <h5 class="card-title"><strong><%= article.title %></strong></h5>
+      <p class="card-text"><%= article.text[0..50] + '...' %></p>
+      <%= link_to 'read more...', article_path(article), class: 'text-orange' %>
+    </div>
+  </div>
+</article>

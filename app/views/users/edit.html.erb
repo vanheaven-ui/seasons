@@ -1,0 +1,11 @@
+<header><%= render 'shared/nav' %></header>
+<section class="user-index text-white text-center w-75 mx-auto pt-3">
+  <h1 class="text-orange u-white mb-3">Editing User</h1>
+  <%= render 'form', user: @user %>
+  <span class="spacer"></span>
+  <%= link_to 'Show', @user %> |
+  <%= link_to 'Back', users_path %>
+</section>
+<footer class="border">
+  <%= render 'shared/footer' %>
+</footer>

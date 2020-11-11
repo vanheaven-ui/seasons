@@ -1,0 +1,29 @@
+<header>
+  <%= render 'shared/nav' %>
+</header>
+<section class="home-page container-fluid">
+  <div class="row">
+    <article class="col-12 col-md-9 text-orange p-0 vh-60 p-relative">
+      <%= render 'articles/most_voted_article_display' %>
+    </article>
+    <aside class="col-md-3 user-activity text-white p-0">
+      <h5 class="text-white transparent-bg pl-4 py-2">User Activity Board</h5>
+      <ul class="list-group">
+        <% @users.each do |user| %>
+          <li class="list-group-item text-orange bg-transparent">
+            <span>@<%= user.username %></span> -
+            <%= pluralize(user.authored_articles.count, 'article') %> -
+            <%= link_to 'Follow', '#', class: 'text-orange' %>
+          </li>
+        <% end %>
+      </ul>
+    </aside>
+  </div>
+  <div class="row">
+    <% @sorted_categories.each do |category| %>
+      <article class="col-6 col-md-3 p-0">
+        <%= render 'articles/category_articles_display', category: category %>
+      </article>
+    <% end %>
+  </div>
+</section>

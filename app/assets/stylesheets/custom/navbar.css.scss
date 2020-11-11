@@ -1,0 +1,27 @@
+nav {
+  font-family: "Roboto Condensed", sans-serif;
+
+  .logo-section {
+    a {
+      font-weight: 700;
+    }
+  }
+
+  .active {
+    color: #ff6300;
+  }
+
+  .navbar-right {
+    position: relative;
+
+    .verticle-bar {
+      position: absolute;
+      top: 7px;
+      left: 55px;
+    }
+  }
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #ff6300;
+}

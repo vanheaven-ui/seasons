@@ -1,0 +1,68 @@
+<header>
+  <%= render 'shared/nav' %>
+</header>
+<section class="show-page mx-auto pt-1">
+  <div class="card">
+    <h5 class="card-title article-h text-center mb-0"><strong><%= @article.title %></strong></h5>
+    <hr />
+    <div class='d-flex justify-content-around'>
+      <p class="mb-1">
+        <strong>Written By: </strong>
+        <span class="text-orange">
+          <%= link_to user_path(@article.author.id) do %>
+            <%= @article.author.name %>
+            <a class="social-links-item text-dark" href="#">
+              <i class="fab fa-facebook-f fa-1x"></i>
+            </a>
+            <a class="social-links-item text-dark" href="#">
+              <i class="fab fa-twitter fa-1x"></i>
+            </a>
+            <a class="social-links-item text-dark" href="#">
+              <i class="fab fa-instagram fa-1x"></i>
+            </a>
+          <% end %>
+        </span>
+      </p>
+      <span><%= distance_of_time_in_words(Time.now, @article.created_at) %> ago</span>
+    </div>
+    <p class="statistics text-center">
+    <small>
+      <span class='mr-1 mb-2 text-orange'><strong>Voted</strong></span>
+      <%= pluralize(@article.votes.count, 'time') %>
+    </small>
+    <small>
+      <span class='mr-1 mb-2 text-orange'><strong>Comments</strong></span>
+      <%= "(#{@article.comments.count})" %>
+    </small>
+    </p>
+    <div class="card-img vh-60">
+      <%= article_image_attached_check(@article) %>
+      <a href="#">
+        <%= article_categories_exist_check(@article) %>
+      </a>
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= @article.text %></p>
+      <%= article_comments_exist_check(@article) %>
+      <p class="comment-link">
+        <a class="btn btn-orange" data-toggle="collapse" href="#commentsForm" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Leave a comment
+          <i class= 'fas fa-angle-down'></i>
+        </a>
+      </p>
+      <div class="collapse" id="commentsForm">
+        <div class="card card-body">
+          <%= render 'articles/comment-form', article: @article %>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%= authorize_edit(@article) %>
+        <%= link_to articles_path do %>
+          <strong><i class='fa fa-home text-orange' aria-hidden="true"></i></strong>
+          Home
+        <% end %>
+        <%= vote_or_unvote(@article) %>
+      </div>
+    </div>
+  </div>
+</section>
