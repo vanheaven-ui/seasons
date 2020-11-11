@@ -31,10 +31,11 @@ This project was a task by Microverse Inc. to build an application with the desi
 
 ## App Deployment
 The built app was deployed to heroku by following the guide on [Heroku deployment for rails 6.X](https://devcenter.heroku.com/articles/getting-started-with-rails6). <br />
-To view the live version of the app, [click here!](https://life-seasons.herokuapp.com/)
+
+**To view the live version of the app, [click here!](https://life-seasons.herokuapp.com/)**
 
 ## Data Modelling
-The Entity Relationship Diagram below was provided by microverse to guide the associations between the data models in this project.`
+The Entity Relationship Diagram below was provided by microverse to guide the associations between the data models in this project.
 ![ERD](/app/assets/images/ERD.jpg)
 
 ## 🔧 Built with<a name = "with"></a>
@@ -47,6 +48,7 @@ The Entity Relationship Diagram below was provided by microverse to guide the as
   - [x] rspec-rails (4.0.1)
   - [x] capybara (3.33.0)
   - [x] shoulda-matchers (4.4.1)
+  - [x] cancan (1.6.10)
 
 ## Usage <a name = "usage"></a>
 To use the code in this repository, follow the steps in this section:
