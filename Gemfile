@@ -9,7 +9,7 @@ gem 'aws-sdk-s3', require: false
 # Set Environment variables
 gem 'dotenv-rails', groups: %i[development test]
 
-# Use CanCan for suthorization
+# Use CanCan for authorization
 gem 'cancan'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
