@@ -27,7 +27,7 @@ This is an application where users can write articles on various seasons in life
 
 
 ## About <a name = "about"></a>
-This project was a task by Microverse Inc. to build an application with the design by [Nelson Sakwa on behance](https://mir-s3-cdn-cf.behance.net/project_modules/disp/c498ab14554909.56285e690f20a.png). The application should accomplish certain tasks that include; a user should login by entering a username, a user should be able to write an article with a specific category(s) attached to it, users should be able to vote on the different categories.As an extra, I included a feature where users can leave comments on the articles.
+This project was a task by Microverse Inc. to build an application with the design by [Nelson Sakwa on behance](https://mir-s3-cdn-cf.behance.net/project_modules/disp/c498ab14554909.56285e690f20a.png). The application should accomplish certain tasks that include; a user should login by entering a username, a user should be able to write an article with a specific category(s) attached to it, users should be able to vote on the different categories. As an extra, I included a feature where users can leave comments on the articles.
 
 ## App Deployment
 The built app was deployed to heroku by following the guide on [Heroku deployment for rails 6.X](https://devcenter.heroku.com/articles/getting-started-with-rails6). <br />
